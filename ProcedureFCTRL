@@ -1,0 +1,26 @@
+# 1kurs
+program test;
+var q : string;
+    a : integer;
+    y : LongInt;
+
+Procedure FCTRL (X : LongInt);
+begin
+  if X = 1 then Y := 1
+           else begin
+           FCTRL(X-1);
+           Y := X * Y;
+           end;
+end;
+
+begin
+  repeat begin
+          writeln('factoralize THIS: ');
+          readln(a);
+          FCTRL(a);
+          writeln(a,' factoralized is ',y); 
+         end;
+         write(#10,'submit "exit" to quit, ignore to cycle: ');
+         readln(q);
+  until q = 'exit';
+end.
